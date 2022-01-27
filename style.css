@@ -1,64 +1,35 @@
-    .header_background_color {
-        background-color: aqua;
-    }
-    .main_layout_background {
-        background-color: rgb(206, 206, 206);
-    }
 
-    /* EINNAHMEN */
-
-    .einnahmen_header_layout {
-        position: absolute;
-        left: 35px;
-        top: 70px;
+    .page-content {
+        transform: scale(0.75);
+    }
+    .mdl-button {
+        background-color: rgb(48, 48, 48);
+        color: white;
+        margin-left: 340px;
+        margin-top: -130px;
+    }
+    .mdl-layout__content {
+        background-color: rgb(255, 255, 255);
+    }
+    .mdl-layout__header {
+        display: block;
+        background-color: rgb(48, 48, 48);
+    }
+    .mdl-layout__drawer-button {
+        background-color: rgb(48, 48, 48);
+        color: white;
+    }
+    .mdl-layout__drawer {
+        background-color: rgb(150, 150, 150);
+    }
+    .header_einnahmen {
+        margin-top: 40px;
         font-family: "Roboto";
-        font-size: large;
+        font-size: x-large;
+        color: rgb(48, 48, 48);
     }
-    .einnahmen_itemText_layout {
+    .margin_top_header_einnahmen {
         position: absolute;
-        left: 5px;
-        top: 95px;
-        transform: scale(0.75);
+        margin-top: 40px;
     }
-    .einnahmen_itemNumber_layout {
-        position: absolute;
-        left: 5px;
-        top: 145px;
-        transform: scale(0.75);
-    }
-    .einnahmen_add_item_button_layout {
-        transform: scale(0.75);
-        position: absolute;
-        left: 300px;
-        top: 135px;
-        background-color: rgba(97, 165, 228, 0.527);
-    }
-
-    /* AUSGABEN */
-
-    .ausgaben_header_layout {
-        position: absolute;
-        left: 35px;
-        top: 230px;
-        font-family: "Roboto";
-        font-size: large;
-    }
-    .ausgaben_itemText_layout {
-        position: absolute;
-        left: 5px;
-        top: 255px;
-        transform: scale(0.75);
-    }
-    .ausgaben_itemNumber_layout {
-        position: absolute;
-        left: 5px;
-        top: 305px;
-        transform: scale(0.75);
-    }
-    .ausgaben_add_item_button_layout {
-        transform: scale(0.75);
-        position: absolute;
-        left: 300px;
-        top: 295px;
-        background-color: rgba(97, 165, 228, 0.527);
-    }
+    

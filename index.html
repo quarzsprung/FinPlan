@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinPlan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout--fixed-header header_background_color">
+            <div class="mdl-layout-icon"></div>
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout__title">FinPlan Haushaltsrechner</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#">Nav link 1</a>
+                    <a class="mdl-navigation__link" href="#">Nav link 2</a>
+                    <a class="mdl-navigation__link" href="#">Nav link 3</a>
+                  </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer"></div>
+        <main class="mdl-layout__content main_layout_background">
+            <div class="einnahmen_header_layout">Einnahmen</div>
+            <form action="#">
+
+                <div class="mdl-textfield mdl-js-textfield einnahmen_itemText_layout">
+                    <input class="mdl-textfield__input" type="text" id="sample1">
+                    <label class="mdl-textfield__label" for="sample1">Einnahmequelle...</label>
+                  </div>
+                
+                <div class="mdl-textfield mdl-js-textfield einnahmen_itemNumber_layout">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                    <label class="mdl-textfield__label" for="sample2">Betrag...</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect einnahmen_add_item_button_layout">
+                <i class="material-icons">add</i>
+                </button>
+            
+
+            <div class="ausgaben_header_layout">Ausgaben</div>
+            <form action="#">
+
+                <div class="mdl-textfield mdl-js-textfield ausgaben_itemText_layout">
+                    <input class="mdl-textfield__input" type="text" id="sample1">
+                    <label class="mdl-textfield__label" for="sample1">Verwendungszweck...</label>
+                    </div>
+                
+                <div class="mdl-textfield mdl-js-textfield ausgaben_itemNumber_layout">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                    <label class="mdl-textfield__label" for="sample2">Betrag...</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect ausgaben_add_item_button_layout">
+                <i class="material-icons">add</i>
+                </button>
+        
+
+            </form>
+          </main>
+    </div>
+</body>
+</html>

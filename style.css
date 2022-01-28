@@ -32,4 +32,11 @@
         position: absolute;
         margin-top: 40px;
     }
-    
+    .display_income_layout {
+        position: absolute;
+        margin-left: 180px;
+        margin-top: -40px;
+        width: fit-content;
+        color: black;
+        font-size: x-large;
+    }

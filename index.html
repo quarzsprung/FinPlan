@@ -35,9 +35,14 @@
             Einnahmen
         </div>
 
+        <div class="mdl-textfield mdl-js-textfield display_income_layout" inputProps={fontColor}>
+          <input class="mdl-textfield__input mdl-textfield" type="text" id="displayEinnahmen" disabled>
+        </div>
+  
+
         <!-- Simple Textfield -->
         <div class="margin_top_header_einnahmen">
-            <form onsubmit="addEinnahme(); return false;">
+            <form onsubmit="addEinnahme();addtoArray(); return false;">
 
                 <div class="mdl-textfield mdl-js-textfield">
                     <input class="mdl-textfield__input" type="text" id="einnahme">

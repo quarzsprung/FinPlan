@@ -51,7 +51,7 @@
 
         <!-- Simple Textfield -->
         <div class="margin_top_header_einnahmen">
-            <form onsubmit="addEinnahme();addtoArray(); return false;">
+            <form onsubmit="addEinnahme();addtoEinnahmenArray();displaySaldo(); return false;">
 
                 <div class="mdl-textfield mdl-js-textfield">
                     <input class="mdl-textfield__input" type="text" id="einnahme">
@@ -77,6 +77,17 @@
             <ul class="mdl-list" id="einnahmenliste">
                 
             </ul>
+
+            
+        </div>
+        
+        <!-- Displaying the overall saldo on Tab 1 -->
+        <div class="header_saldo">
+          Saldo
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield display_saldo_layout" inputProps={fontColor}>
+          <input class="mdl-textfield__input mdl-textfield" type="text" id="einnahmen_displaySaldo" disabled>
         </div>
         </div>
       </section>
@@ -98,7 +109,7 @@
         
         <!-- Simple Textfield -->
         <div class="margin_top_header_ausgaben">
-            <form onsubmit="addAusgabe();addtoAusgabenArray(); return false;">
+            <form onsubmit="addAusgabe();addtoAusgabenArray();displaySaldo(); return false;">
 
                 <div class="mdl-textfield mdl-js-textfield">
                     <input class="mdl-textfield__input" type="text" id="ausgabe">
@@ -124,6 +135,15 @@
             <ul class="mdl-list" id="ausgabenliste">
                 
             </ul>
+        </div>
+
+        <!-- Displaying the overall saldo on Tab 2 -->
+        <div class="header_saldo">
+          Saldo
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield display_saldo_layout" inputProps={fontColor}>
+          <input class="mdl-textfield__input mdl-textfield" type="text" id="ausgaben_displaySaldo" disabled>
         </div>
         </div>
       </section>

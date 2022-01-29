@@ -14,18 +14,17 @@ function addEinnahme() {
   </li>`
 }
 
-var myArray = [];
-var sum = 0;
+var myEinnahmenArray = [];
+var sum_Einnahmen = 0;
 
-function addtoArray() {
+function addtoEinnahmenArray() {
 
-  var test = parseInt(document.getElementById("einnahmebetrag").value);
-  myArray.push(test);
+  var einnahme = parseInt(document.getElementById("einnahmebetrag").value);
+  myEinnahmenArray.push(einnahme);
 
-  sum = myArray.reduce((a, b) => a + b, 0);
-  console.log(sum);
+  sum_Einnahmen = myEinnahmenArray.reduce((a, b) => a + b, 0);
 
-  document.getElementById("displayEinnahmen").value = sum;
+  document.getElementById("displayEinnahmen").value = sum_Einnahmen;
 }
 
 
@@ -35,7 +34,7 @@ function addAusgabe() {
 
   ausgabenliste.innerHTML += `<li class="mdl-list__item">
     <span class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment">
-      <i class="material-icons  mdl-list__item-avatar">add_circle_outline</i>
+      <i class="material-icons  mdl-list__item-avatar">remove_circle_outline</i>
       ${ausgabe.value}
     </span>
     <span class="mdl-list__item-primary-content mdl_list_secondary_alignment">
@@ -46,15 +45,31 @@ function addAusgabe() {
 }
 
 var myAusgabenArray = [];
-var ausgabensum = 0;
+var sum_Ausgaben = 0;
 
 function addtoAusgabenArray() {
 
-  var ausgabetest = parseInt(document.getElementById("ausgabebetrag").value);
-  myAusgabenArray.push(ausgabetest);
+  var ausgabe = parseInt(document.getElementById("ausgabebetrag").value);
+  myAusgabenArray.push(ausgabe);
 
-  ausgabensum = myAusgabenArray.reduce((c, d) => c + d, 0);
-  console.log(ausgabensum);
+  sum_Ausgaben = myAusgabenArray.reduce((c, d) => c + d, 0);
 
-  document.getElementById("displayAusgaben").value = ausgabensum;
+  document.getElementById("displayAusgaben").value = sum_Ausgaben;
+}
+
+/* Function to display the overall saldo */
+
+var saldo = 0;
+var display_einnahme = 0;
+var display_ausgabe = 0;
+
+function displaySaldo() {
+
+  var display_einnahme = document.getElementById("displayEinnahmen").value;
+  var display_ausgabe = document.getElementById("displayAusgaben").value;
+
+  var saldo = display_einnahme - display_ausgabe;
+
+  document.getElementById("einnahmen_displaySaldo").value = saldo;
+  document.getElementById("ausgaben_displaySaldo").value = saldo;
 }

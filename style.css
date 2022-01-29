@@ -2,13 +2,6 @@
     .page-content {
         transform: scale(0.75);
     }
-    .content_background {
-        background: url(pics/watercolor-gfda927323_1920.jpg) ;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
     .tabs_background {
         background-color: rgb(48, 48, 48);
     }
@@ -48,20 +41,17 @@
     .mdl-layout__drawer {
         background-color: rgb(150, 150, 150);
     }
-    .textfield_color {
-        color: white;
-    }
     .header_einnahmen {
         margin-top: 40px;
         font-family: "Roboto";
         font-size: x-large;
-        color: rgb(255, 255, 255);
+        color: rgb(48, 48, 48);
     }
     .header_ausgaben {
         margin-top: 40px;
         font-family: "Roboto";
         font-size: x-large;
-        color: rgb(255, 255, 255);
+        color: rgb(48, 48, 48);
     }
     .margin_top_header_einnahmen {
         position: absolute;
@@ -78,4 +68,17 @@
         width: fit-content;
         color: black;
         font-size: x-large;
+    }
+    .display_saldo_layout {
+        position: absolute;
+        margin-top: 830px;
+        margin-left: 270px;
+        width: fit-content;
+    }
+    .header_saldo {
+        position: absolute;
+        margin-top: 850px;
+        font-size: xx-large;
+        font-family: "Roboto";
+        color: rgb(48, 48, 48);
     }

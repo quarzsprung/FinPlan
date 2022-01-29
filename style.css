@@ -2,6 +2,32 @@
     .page-content {
         transform: scale(0.75);
     }
+    .content_background {
+        background: url(pics/watercolor-gfda927323_1920.jpg) ;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .tabs_background {
+        background-color: rgb(48, 48, 48);
+    }
+    .mdl-tabs__tab-bar  {
+        justify-content: flex-start;
+      }
+    .mdl_list_primary_alignment {
+        display         : flex;
+        justify-content : left;
+        align-items     : left;
+    }
+    .mdl_list_secondary_alignment {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+    }
+    .mdl-list__item {
+        box-sizing: 50px;
+    }
     .mdl-button {
         background-color: rgb(48, 48, 48);
         color: white;
@@ -22,13 +48,26 @@
     .mdl-layout__drawer {
         background-color: rgb(150, 150, 150);
     }
+    .textfield_color {
+        color: white;
+    }
     .header_einnahmen {
         margin-top: 40px;
         font-family: "Roboto";
         font-size: x-large;
-        color: rgb(48, 48, 48);
+        color: rgb(255, 255, 255);
+    }
+    .header_ausgaben {
+        margin-top: 40px;
+        font-family: "Roboto";
+        font-size: x-large;
+        color: rgb(255, 255, 255);
     }
     .margin_top_header_einnahmen {
+        position: absolute;
+        margin-top: 40px;
+    }
+    .margin_top_header_ausgaben {
         position: absolute;
         margin-top: 40px;
     }

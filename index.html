@@ -16,22 +16,31 @@
 <body>
 <!-- Uses a header that scrolls with the text, rather than staying
   locked at the top -->
-  <div class="mdl-layout mdl-js-layout">
-    <header class="mdl-layout__header mdl-layout__header--scroll">
-      <div class="mdl-layout__header-row">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-tabs">
+    <header class="mdl-layout__header mdl-layout__header--scroll tabs_background">
+      <div class="mdl-layout__header-row ">
         <!-- Title -->
         <span class="mdl-layout-title">FinPlan Kostenplaner</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
       </div>
+         <!-- Tabs -->
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect tabs_background">
+        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Einnahmen</a>
+        <a href="#scroll-tab-2" class="mdl-layout__tab">Ausgaben</a>
+      </div>
     </header>
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Title</span>
     </div>
-    <main class="mdl-layout__content">
-      <div class="page-content">
-        <!-- Your content goes here -->
-        <div class="header_einnahmen">
+    <main class="mdl-layout__content content_background">
+
+      <!-- TAB NUMBER 1: INCOME -->
+
+      <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+        <div class="page-content">
+          <!-- Your content goes here -->
+          <div class="header_einnahmen">
             Einnahmen
         </div>
 
@@ -46,29 +55,79 @@
 
                 <div class="mdl-textfield mdl-js-textfield">
                     <input class="mdl-textfield__input" type="text" id="einnahme">
-                    <label class="mdl-textfield__label" for="einnahme">Einnahmequelle...</label>
+                    <label class="mdl-textfield__label textfield_color" for="einnahme">Einnahmequelle...</label>
                 </div>
 
                 <!-- Numeric Textfield -->
 
                 <div class="mdl-textfield mdl-js-textfield">
                     <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="einnahmebetrag">
-                    <label class="mdl-textfield__label" for="einnahmebetrag">Betrag...</label>
+                    <label class="mdl-textfield__label textfield_color" for="einnahmebetrag">Betrag...</label>
                     <span class="mdl-textfield__error">Ungültige Eingabe!</span>
                 </div>
 
 
             <!-- FAB button with ripple -->
-                <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="einnahmebutton">
                     <i class="material-icons">add</i>
                 </button>
 
             </form>   
 
-            <ul class="demo-list-control mdl-list" id="einnahmenliste">
+            <ul class="mdl-list" id="einnahmenliste">
                 
             </ul>
         </div>
+        </div>
+      </section>
+    
+
+      <!-- TAB NUMBER 2: OUTCOME -->
+
+      <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+        <div class="page-content">
+          <!-- Your content goes here -->
+          <div class="header_ausgaben">
+            Ausgaben
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield display_income_layout" inputProps={fontColor}>
+          <input class="mdl-textfield__input mdl-textfield" type="text" id="displayAusgaben" disabled>
+        </div>
+  
+        
+        <!-- Simple Textfield -->
+        <div class="margin_top_header_ausgaben">
+            <form onsubmit="addAusgabe();addtoAusgabenArray(); return false;">
+
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="ausgabe">
+                    <label class="mdl-textfield__label textfield_color" for="ausgabe">Verwendungszweck...</label>
+                </div>
+
+                <!-- Numeric Textfield -->
+
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="ausgabebetrag">
+                    <label class="mdl-textfield__label textfield_color" for="ausgabebetrag">Betrag...</label>
+                    <span class="mdl-textfield__error">Ungültige Eingabe!</span>
+                </div>
+
+
+            <!-- FAB button with ripple -->
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="ausgabebutton">
+                    <i class="material-icons">add</i>
+                </button>
+
+            </form>   
+
+            <ul class="mdl-list" id="ausgabenliste">
+                
+            </ul>
+        </div>
+        </div>
+      </section>
+        
     </div>
     </main>
   </div>

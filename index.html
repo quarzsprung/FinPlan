@@ -33,7 +33,7 @@
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Title</span>
     </div>
-    <main class="mdl-layout__content content_background">
+    <main class="mdl-layout__content page_content_backgroundcolor">
 
       <!-- TAB NUMBER 1: INCOME -->
 
@@ -46,11 +46,11 @@
               Saldo
             </div>
 
-            <div class="textfield block" inputProps={fontColor}>
+            <div class="textfield block">
               <input class="textfield display_saldo_position" type="text" id="einnahmen_displaySaldo" disabled>
             </div>
 
-            <div class="textfield block" inputProps={fontColor}>
+            <div class="textfield block">
               <i class="material-icons currency_position">euro_symbol</i>
             </div>
           </div>
@@ -60,17 +60,17 @@
 
           <!-- Simple Textfield -->
           <div>
-            <form onsubmit="addEinnahme();addtoEinnahmenArray();displaySaldo(); return false;">
+            <form onsubmit="addEinnahme();addtoEinnahmenArray();displaySaldo();checkValue(); return false;">
 
                 <div class="mdl-textfield mdl-js-textfield text_input_layout">
-                    <input class="mdl-textfield__input" type="text" id="einnahme">
+                    <input class="mdl-textfield__input mdl-layout__content_textfield" type="text" id="einnahme">
                     <label class="mdl-textfield__label" for="einnahme">Einnahmequelle...</label>
                 </div>
 
                 <!-- Numeric Textfield -->
 
                 <div class="mdl-textfield mdl-js-textfield text_input_layout">
-                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="einnahmebetrag">
+                    <input class="mdl-textfield__input mdl-layout__content_textfield" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="einnahmebetrag">
                     <label class="mdl-textfield__label" for="einnahmebetrag">Betrag...</label>
                     <span class="mdl-textfield__error">Ungültige Eingabe!</span>
                 </div>
@@ -126,7 +126,7 @@
         
           <!-- Simple Textfield -->
           <div>
-              <form onsubmit="addAusgabe();addtoAusgabenArray();displaySaldo(); return false;">
+              <form onsubmit="addAusgabe();addtoAusgabenArray();displaySaldo();checkValue(); return false;">
 
                   <div class="mdl-textfield mdl-js-textfield text_input_layout">
                       <input class="mdl-textfield__input" type="text" id="ausgabe">

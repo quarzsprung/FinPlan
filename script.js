@@ -4,7 +4,7 @@ function addEinnahme() {
 
   einnahmenliste.innerHTML += `<li class="mdl-list__item list_margin_left">
     
-    <div class="material-icons mdl-list__item-avatar icon_in_list_layout">add_circle_outline </div>
+    <i class="material-icons mdl-list__item-avatar icon_in_list_layout" style="color: rgb(48, 48, 48); background:none;">add_circle_outline </i>
     <div >
       <div class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment">
         ${einnahme.value}
@@ -36,7 +36,7 @@ function addAusgabe() {
 
   ausgabenliste.innerHTML += `<li class="mdl-list__item list_margin_left">
     
-  <div class="material-icons mdl-list__item-avatar icon_in_list_layout">remove_circle_outline</div>
+  <i class="material-icons mdl-list__item-avatar icon_in_list_layout" style="color: rgb(48, 48, 48); background:none;">remove_circle_outline</i>
   <div >
     <div class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment">
       ${ausgabe.value}
@@ -76,4 +76,30 @@ function displaySaldo() {
 
   document.getElementById("einnahmen_displaySaldo").value = saldo;
   document.getElementById("ausgaben_displaySaldo").value = saldo;
+}
+
+/* Function to check the value of saldo and changes the color regarding if the value is smaller or bigger than 0 */
+
+var value = 0;
+
+function checkValue() {
+
+  value = document.getElementById("einnahmen_displaySaldo").value
+
+  if (value < 0)
+   document.getElementById("einnahmen_displaySaldo").style = "color: red;"
+  else if (value > 0)
+   document.getElementById("einnahmen_displaySaldo").style = "color: green;"
+  else
+   document.getElementById("einnahmen_displaySaldo").style = "color: rgb(48, 48, 48);"
+    
+   value = document.getElementById("ausgaben_displaySaldo").value
+
+   if (value < 0)
+    document.getElementById("ausgaben_displaySaldo").style = "color: red;"
+   else if (value > 0)
+    document.getElementById("ausgaben_displaySaldo").style = "color: green;"
+   else
+    document.getElementById("ausgaben_displaySaldo").style = "color: rgb(48, 48, 48);"
+
 }

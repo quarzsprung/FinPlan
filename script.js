@@ -2,15 +2,17 @@
 
 function addEinnahme() {
 
-  einnahmenliste.innerHTML += `<li class="mdl-list__item">
-    <span class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment">
-      <i class="material-icons  mdl-list__item-avatar">add_circle_outline</i>
-      ${einnahme.value}
-    </span>
-    <span class="mdl-list__item-primary-content mdl_list_secondary_alignment">
-      <i class="material-icons  mdl-list__item-avatar">euro</i>
-      ${einnahmebetrag.value}
-    </span>
+  einnahmenliste.innerHTML += `<li class="mdl-list__item list_margin_left">
+    
+    <div class="material-icons mdl-list__item-avatar icon_in_list_layout">add_circle_outline </div>
+    <div >
+      <div class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment">
+        ${einnahme.value}
+      </div>
+      <div class="mdl-list__item-primary-content mdl_list_primary_alignment_value value_in_list">
+        ${einnahmebetrag.value}
+      </div>
+    </div>
   </li>`
 }
 
@@ -32,16 +34,18 @@ function addtoEinnahmenArray() {
 
 function addAusgabe() {
 
-  ausgabenliste.innerHTML += `<li class="mdl-list__item">
-    <span class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment">
-      <i class="material-icons  mdl-list__item-avatar">remove_circle_outline</i>
+  ausgabenliste.innerHTML += `<li class="mdl-list__item list_margin_left">
+    
+  <div class="material-icons mdl-list__item-avatar icon_in_list_layout">remove_circle_outline</div>
+  <div >
+    <div class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment">
       ${ausgabe.value}
-    </span>
-    <span class="mdl-list__item-primary-content mdl_list_secondary_alignment">
-      <i class="material-icons  mdl-list__item-avatar">euro</i>
+    </div>
+    <div class="mdl-list__item-primary-content mdl_list_primary_alignment_value value_in_list">
       ${ausgabebetrag.value}
-    </span>
-  </li>`
+    </div>
+  </div>
+</li>`
 }
 
 var myAusgabenArray = [];

@@ -16,3 +16,9 @@ v.0.2 (29.01.2022):
 - added a disabled textfield that displays the actual overall outcome
 - added a function that pulls the values from overall income and outcome
 - added a disabled textfield that displays the overall saldo, pulling its value from the subtraction of income and outcome
+
+v.0.3 (30.01.2022):
+
+- modified the app layout
+- changed position of saldo and income/outcome to keep the result more visible
+- cleaned up the code, deleted old style classes

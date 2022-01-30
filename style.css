@@ -1,7 +1,3 @@
-
-    .page-content {
-        transform: scale(0.75);
-    }
     .tabs_background {
         background-color: rgb(48, 48, 48);
     }
@@ -9,23 +5,29 @@
         justify-content: flex-start;
       }
     .mdl_list_primary_alignment {
-        display         : flex;
-        justify-content : left;
-        align-items     : left;
+        width: 210px;
+        word-break: break-all;
+        margin-top: -12px;
     }
-    .mdl_list_secondary_alignment {
-        display         : flex;
-        justify-content : center;
-        align-items     : center;
+    .mdl_list_primary_alignment_value {
+        width: 180px;
+        word-break: break-all;
+        margin-top: -12px;
     }
-    .mdl-list__item {
-        box-sizing: 50px;
+    .list_margin_left {
+        margin-left: 65px;
+    }
+    .value_in_list {
+        margin-left: 16px;
+    }
+    .icon_in_list_layout {
+        transform: scale(1.2);
     }
     .mdl-button {
         background-color: rgb(48, 48, 48);
         color: white;
-        margin-left: 340px;
-        margin-top: -130px;
+        margin-left: 25px;
+        margin-bottom: 35px;
     }
     .mdl-layout__content {
         background-color: rgb(255, 255, 255);
@@ -41,44 +43,90 @@
     .mdl-layout__drawer {
         background-color: rgb(150, 150, 150);
     }
-    .header_einnahmen {
-        margin-top: 40px;
+    .header_saldo {
         font-family: "Roboto";
-        font-size: x-large;
+        font-size: 30px;
         color: rgb(48, 48, 48);
+        margin-left: 30px;
+        margin-top: 30px;
     }
-    .header_ausgaben {
-        margin-top: 40px;
+    .income_sum_title_layout {
         font-family: "Roboto";
-        font-size: x-large;
+        font-size: 20px;
         color: rgb(48, 48, 48);
+        margin-left: 30px;
+        margin-top: 30px;
     }
-    .margin_top_header_einnahmen {
-        position: absolute;
-        margin-top: 40px;
+    .saldo_header_height {
+        height: 80px;
     }
-    .margin_top_header_ausgaben {
-        position: absolute;
-        margin-top: 40px;
+    .display_saldo_position {
+        width: 165px;
+        height: fit-content;
+        word-break: break-all;
+        margin-left: 70px;
+        text-align: right;
     }
-    .display_income_layout {
-        position: absolute;
-        margin-left: 180px;
-        margin-top: -40px;
-        width: fit-content;
-        color: black;
-        font-size: x-large;
+    .currency_position {
+        margin-left: 5px;
+        background: none;
+        color: rgb(48, 48, 48);
+        transform: scale(1.3);
+    }
+    .currency_position_south {
+        margin-top: -7.6px;
+        vertical-align: middle;
+        background: none;
+        color: rgb(48, 48, 48);
+        transform: scale(0.9);
+    }
+    .display_income_position {
+        width: 155px;
+        height: fit-content;
+        word-break: break-all;
+        margin-left: 50px;
+        text-align: right;
+    }
+    .display_outcome_position {
+        width: 155px;
+        height: fit-content;
+        word-break: break-all;
+        margin-left: 66px;
+        text-align: right;
     }
     .display_saldo_layout {
-        position: absolute;
-        margin-top: 830px;
-        margin-left: 270px;
-        width: fit-content;
-    }
-    .header_saldo {
-        position: absolute;
-        margin-top: 850px;
+        position: relative;
         font-size: xx-large;
-        font-family: "Roboto";
-        color: rgb(48, 48, 48);
+        border-color: none;
+        background-color: none;
+    }
+    .textfield {
+        height: 40px;
+        font-size: xx-large;
+        background: none;
+        border: none;
+    }
+    .textfield_south {
+        font-size: 21px;
+        background: none;
+        border: none;
+    }
+    .row {
+        width: 100%;
+        margin: 0 auto;
+        overflow: visible;
+    }
+    .block {
+        display: inline-block;
+        overflow:visible
+    }
+    .text_input_layout {
+        width: 250px;
+        margin-top: 20px;
+        margin-left: 80px;
+        transform: scale(1.0);
+    }
+    .add_button_layout {
+        margin-top: 50px;
+        margin-left: 180px;
     }

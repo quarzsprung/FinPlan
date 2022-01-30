@@ -18,7 +18,7 @@
   locked at the top -->
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-tabs">
     <header class="mdl-layout__header mdl-layout__header--scroll tabs_background">
-      <div class="mdl-layout__header-row ">
+      <div class="mdl-layout__header-row">
         <!-- Title -->
         <span class="mdl-layout-title">FinPlan Kostenplaner</span>
         <!-- Add spacer, to align navigation to the right -->
@@ -38,37 +38,46 @@
       <!-- TAB NUMBER 1: INCOME -->
 
       <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+        
         <div class="page-content">
-          <!-- Your content goes here -->
-          <div class="header_einnahmen">
-            Einnahmen
-        </div>
+          <div class="saldo_header_height">
+            <!-- Your content goes here -->
+            <div class="header_saldo block">
+              Saldo
+            </div>
 
-        <div class="mdl-textfield mdl-js-textfield display_income_layout" inputProps={fontColor}>
-          <input class="mdl-textfield__input mdl-textfield" type="text" id="displayEinnahmen" disabled>
-        </div>
+            <div class="textfield block" inputProps={fontColor}>
+              <input class="textfield display_saldo_position" type="text" id="einnahmen_displaySaldo" disabled>
+            </div>
+
+            <div class="textfield block" inputProps={fontColor}>
+              <i class="material-icons currency_position">euro_symbol</i>
+            </div>
+          </div>
+
+        
   
 
-        <!-- Simple Textfield -->
-        <div class="margin_top_header_einnahmen">
+          <!-- Simple Textfield -->
+          <div>
             <form onsubmit="addEinnahme();addtoEinnahmenArray();displaySaldo(); return false;">
 
-                <div class="mdl-textfield mdl-js-textfield">
+                <div class="mdl-textfield mdl-js-textfield text_input_layout">
                     <input class="mdl-textfield__input" type="text" id="einnahme">
-                    <label class="mdl-textfield__label textfield_color" for="einnahme">Einnahmequelle...</label>
+                    <label class="mdl-textfield__label" for="einnahme">Einnahmequelle...</label>
                 </div>
 
                 <!-- Numeric Textfield -->
 
-                <div class="mdl-textfield mdl-js-textfield">
+                <div class="mdl-textfield mdl-js-textfield text_input_layout">
                     <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="einnahmebetrag">
-                    <label class="mdl-textfield__label textfield_color" for="einnahmebetrag">Betrag...</label>
+                    <label class="mdl-textfield__label" for="einnahmebetrag">Betrag...</label>
                     <span class="mdl-textfield__error">Ungültige Eingabe!</span>
                 </div>
 
 
-            <!-- FAB button with ripple -->
-                <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="einnahmebutton">
+              <!-- FAB button with ripple -->
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button_layout" id="einnahmebutton">
                     <i class="material-icons">add</i>
                 </button>
 
@@ -78,17 +87,19 @@
                 
             </ul>
 
-            
-        </div>
-        
-        <!-- Displaying the overall saldo on Tab 1 -->
-        <div class="header_saldo">
-          Saldo
-        </div>
+            <!-- Displaying the overall saldo on Tab 1 -->
+            <div class="saldo_header_height">
+              <div class="block income_sum_title_layout">
+                Einkommen
+              </div>
 
-        <div class="mdl-textfield mdl-js-textfield display_saldo_layout" inputProps={fontColor}>
-          <input class="mdl-textfield__input mdl-textfield" type="text" id="einnahmen_displaySaldo" disabled>
-        </div>
+              <div class="textfield_south block" inputProps={fontColor}>
+                <input class="textfield_south display_income_position" type="text" id="displayEinnahmen" disabled>
+              </div>
+
+              <div class="material-icons currency_position_south block">euro_symbol
+              </div>
+            </div>
         </div>
       </section>
     
@@ -97,54 +108,61 @@
 
       <section class="mdl-layout__tab-panel" id="scroll-tab-2">
         <div class="page-content">
-          <!-- Your content goes here -->
-          <div class="header_ausgaben">
-            Ausgaben
-        </div>
+          <div class="saldo_header_height">
+            <!-- Your content goes here -->
+            <div class="header_saldo block">
+              Saldo
+            </div>
 
-        <div class="mdl-textfield mdl-js-textfield display_income_layout" inputProps={fontColor}>
-          <input class="mdl-textfield__input mdl-textfield" type="text" id="displayAusgaben" disabled>
-        </div>
+            <div class="textfield block" inputProps={fontColor}>
+              <input class="textfield display_saldo_position" type="text" id="ausgaben_displaySaldo" disabled>
+            </div>
+
+            <div class="textfield block" inputProps={fontColor}>
+              <i class="material-icons currency_position">euro_symbol</i>
+            </div>
+          </div>
   
         
-        <!-- Simple Textfield -->
-        <div class="margin_top_header_ausgaben">
-            <form onsubmit="addAusgabe();addtoAusgabenArray();displaySaldo(); return false;">
+          <!-- Simple Textfield -->
+          <div>
+              <form onsubmit="addAusgabe();addtoAusgabenArray();displaySaldo(); return false;">
 
-                <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" id="ausgabe">
-                    <label class="mdl-textfield__label textfield_color" for="ausgabe">Verwendungszweck...</label>
-                </div>
+                  <div class="mdl-textfield mdl-js-textfield text_input_layout">
+                      <input class="mdl-textfield__input" type="text" id="ausgabe">
+                      <label class="mdl-textfield__label" for="ausgabe">Verwendungszweck...</label>
+                  </div>
 
-                <!-- Numeric Textfield -->
+                  <!-- Numeric Textfield -->
 
-                <div class="mdl-textfield mdl-js-textfield">
-                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="ausgabebetrag">
-                    <label class="mdl-textfield__label textfield_color" for="ausgabebetrag">Betrag...</label>
-                    <span class="mdl-textfield__error">Ungültige Eingabe!</span>
-                </div>
+                  <div class="mdl-textfield mdl-js-textfield text_input_layout">
+                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="ausgabebetrag">
+                      <label class="mdl-textfield__label" for="ausgabebetrag">Betrag...</label>
+                      <span class="mdl-textfield__error">Ungültige Eingabe!</span>
+                  </div>
 
+                  <!-- FAB button with ripple -->
+                  <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect add_button_layout" id="ausgabebutton">
+                      <i class="material-icons">add</i>
+                  </button>
 
-            <!-- FAB button with ripple -->
-                <button type="submit" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="ausgabebutton">
-                    <i class="material-icons">add</i>
-                </button>
+              </form>   
 
-            </form>   
+              <ul class="mdl-list" id="ausgabenliste"></ul>
+      
+          <!-- Displaying the overall saldo on Tab 1 -->
+          <div class="saldo_header_height">
+            <div class="block income_sum_title_layout">
+              Ausgaben
+            </div>
 
-            <ul class="mdl-list" id="ausgabenliste">
-                
-            </ul>
-        </div>
+            <div class="textfield_south block" inputProps={fontColor}>
+              <input class="textfield_south display_outcome_position" type="text" id="displayAusgaben" disabled>
+            </div>
 
-        <!-- Displaying the overall saldo on Tab 2 -->
-        <div class="header_saldo">
-          Saldo
-        </div>
-
-        <div class="mdl-textfield mdl-js-textfield display_saldo_layout" inputProps={fontColor}>
-          <input class="mdl-textfield__input mdl-textfield" type="text" id="ausgaben_displaySaldo" disabled>
-        </div>
+            <div class="material-icons currency_position_south block">euro_symbol
+            </div>
+          </div>
         </div>
       </section>
         

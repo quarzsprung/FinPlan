@@ -1,72 +1,134 @@
+    /* Overall layout color */
     .mdl-layout__content {
-        background: rgb(229, 244, 252);
+        background: rgb(4, 42, 63);
     }
+    /* Style and layout for the tab container bar */
+    .tab-bar {
+        border-radius: 10px; 
+        border-bottom-right-radius: 10px; 
+        border-bottom-left-radius: 10px; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    /* this makes the focus bar invisible */
+    .mdl-textfield.is-focused .mdl-textfield__label {
+        color: transparent;
+    }
+    .mdl-textfield.is-invalid .mdl-textfield__label:after {
+        background-color: transparent;
+    }
+    /* sets the tab font-color */
+    .mdl-layout__tab {
+        color: rgba(167, 162, 162, 0.432);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        height: 40px;
+    }
+    /* adjusts the textfield_input to the frame */
+    .mdl-textfield__input {
+        width: 222px
+    }
+    /* this makes the focus bar invisible after input */
+    .mdl-textfield__label:after{
+        background-color: transparent;
+    }
+    .saldoheader_style {
+        border-radius: 15px;
+        width: 390px;
+        height: 80px;
+        margin-inline: auto;
+        margin-top: 10px;
+        background-color: rgb(4 57 86);
+    }
+    /* sets the height of the main tabs bar */
+    .mdl-layout__tab-bar {
+        height: 45px;
+    }
+    /* sets the background color for the textfields in formular */
     .mdl-layout__content_textfield {
         background: rgb(229, 244, 252);
     }
         .mdl-layout.is-upgraded .mdl-layout__tab.is-active::after {
-        background: rgb(3, 119, 197);
+        background: transparent;
         border-style: solid;
-        border-color: rgb(3, 119, 197);
-        border-width: 1px;
+        border-color: transparent;
+        border-width: 0px;
     }
-    .mdl-textfield__label:after {
-        background-color: rgb(48, 48, 48);
+    /* just a class to search for textfield input of Tab 2 inside a function */
+    .ausgabenkategorie {
+        text-align: left;
     }
-    .input {
-        background-color:rgb(231, 198, 136);
-        background: rgb(231, 198, 136);
+    /* just a class to search for textfield input of Tab 1 inside a function */
+    .einnahmenkategorie {
+        text-align: left;
     }
     .tabs_background {
-        background-color: rgb(85, 84, 84);
+        background-color: rgb(4, 42, 63);
     }
-    .mdl-tabs__tab-bar  {
-        justify-content: flex-start;
-      }
+    /* Adjusts the primare content (text) when adding a list item */
     .mdl_list_primary_alignment {
         width: 210px;
         word-break: break-all;
         margin-top: -12px;
     }
+    /* Adjusts the primare content (value) when adding a list item */
     .mdl_list_primary_alignment_value {
         width: 180px;
         word-break: break-all;
         margin-top: -12px;
     }
+    /* Adjusts the position of the created list after pressing the add button */
     .list_margin_left {
         margin-left: 65px;
     }
+    /* Adjusts the position of the value inside the created list */
     .value_in_list {
         margin-left: 16px;
     }
+    /* Transforms the icon as part of each list item */
     .icon_in_list_layout {
         transform: scale(1.2);
         color: rgb(48, 48, 48);
         background-color: none;
     }
+    .margin_category_text {
+        margin-top: -20px;
+        width: 50px;
+        font-size: 18px;
+    }
     .mdl-layout__tab {
         text-transform: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .mdl-button {
-        background-color: rgb(48, 48, 48);
+        background-color: rgb(4 57 86);
         color: white;
         margin-left: 25px;
         margin-bottom: 35px;
     }
     .mdl-layout__header {
+        padding: 5px;
         display: block;
-        background-color: rgb(48, 48, 48);
+        background-color: rgb(4, 42, 63);
+        border-bottom-style: none;
     }
     .mdl-layout__drawer-button {
-        background-color: rgb(48, 48, 48);
+        background-color: rgb(4, 42, 63);
         color: white;
     }
     .mdl-layout__drawer {
-        background-color: rgb(150, 150, 150);
+        background-color: rgb(4, 42, 63);
     }
     .mdl-textfield__input {
+        text-align: left;
+        margin-left: 15px;
+        margin-top: -12px;
         font-family: "Roboto";
         font-size: 18px;
+        color: white;
+        border-bottom: none;
     }
     .mdl-textfield__label {
         font-family: "Roboto";
@@ -89,8 +151,19 @@
     .saldo_header_height {
         height: 80px;
     }
+    .category_header_height {
+        height: 80px;
+    }
+    .category_button_layout {
+        margin-left: 60px;
+        margin-top: 30px;
+        vertical-align: middle;
+    }
+    .align_category_entries {
+        margin-left: 10px;
+    }
     .display_saldo_position {
-        width: 165px;
+        width: 145px;
         height: fit-content;
         word-break: break-all;
         margin-left: 70px;

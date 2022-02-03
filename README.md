@@ -22,3 +22,10 @@ v.0.3 (30.01.2022):
 - modified the app layout
 - changed position of saldo and income/outcome to keep the result more visible
 - cleaned up the code, deleted old style classes
+
+v.1.0 (03.02.2022):
+
+- made the final design
+- added a category catalogue for income and outcome
+- defined two ids for the list variables that stand for the mat-icons name
+

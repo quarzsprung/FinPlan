@@ -1,15 +1,35 @@
+/* function that responses to click on menu_item with returning the id of the menu_item */
+id_ausgaben = "home";
+$(document).ready(function() { $(".ausgabenkategorie").click(function(){
+  id_ausgaben = $(this).attr("id");
+  console.log(id_ausgaben);
+  })
+  })
+
+
+/* function that responses to click on menu_item with returning the id of the menu_item */
+id_einnahmen = "work"
+$(document).ready(function() { $(".einnahmenkategorie").click(function(){
+  id_einnahmen = $(this).attr("id");
+  console.log(id_einnahmen);
+  })
+  })
+
+
 /* Functions to add incomes and summarize them, including a display for the sum */
 
 function addEinnahme() {
 
   einnahmenliste.innerHTML += `<li class="mdl-list__item list_margin_left">
     
-    <i class="material-icons mdl-list__item-avatar icon_in_list_layout" style="color: rgb(48, 48, 48); background:none;">add_circle_outline </i>
+    <i class="material-icons mdl-list__item-avatar icon_in_list_layout" style="color: white; background:none;">
+      ${id_einnahmen}
+    </i>
     <div >
-      <div class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment">
+      <div class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment" style="color: white";>
         ${einnahme.value}
       </div>
-      <div class="mdl-list__item-primary-content mdl_list_primary_alignment_value value_in_list">
+      <div class="mdl-list__item-primary-content mdl_list_primary_alignment_value value_in_list" style="color: white";>
         ${einnahmebetrag.value}
       </div>
     </div>
@@ -36,12 +56,14 @@ function addAusgabe() {
 
   ausgabenliste.innerHTML += `<li class="mdl-list__item list_margin_left">
     
-  <i class="material-icons mdl-list__item-avatar icon_in_list_layout" style="color: rgb(48, 48, 48); background:none;">remove_circle_outline</i>
+  <i class="material-icons mdl-list__item-avatar icon_in_list_layout" style="color: white; background:none;">
+    ${id_ausgaben}
+  </i>
   <div >
-    <div class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment">
+    <div class="mdl-list__item mdl-list__item-primary-content mdl_list_primary_alignment" style="color: white;">
       ${ausgabe.value}
     </div>
-    <div class="mdl-list__item-primary-content mdl_list_primary_alignment_value value_in_list">
+    <div class="mdl-list__item-primary-content mdl_list_primary_alignment_value value_in_list" style="color: white";>
       ${ausgabebetrag.value}
     </div>
   </div>
@@ -103,3 +125,5 @@ function checkValue() {
     document.getElementById("ausgaben_displaySaldo").style = "color: rgb(48, 48, 48);"
 
 }
+
+
